@@ -2,10 +2,10 @@ class CaesarCipher:
     def __init__(self, shift):
         self.shift = shift % 26
 
-    def encode(self, text):
+    def encrypt(self, text):
         return self._transform(text, self.shift)
 
-    def decode(self, text):
+    def decrypt(self, text):
         return self._transform(text, -self.shift)
 
     def _transform(self, text, shift):

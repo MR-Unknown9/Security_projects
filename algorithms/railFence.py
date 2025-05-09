@@ -2,7 +2,7 @@ class RailFenceCipher:
     def __init__(self, rails):
         self.rails = rails
 
-    def encode(self, text):
+    def encrypt(self, text):
         if self.rails < 2:
             return text
         fence = ["" for _ in range(self.rails)]
@@ -14,7 +14,7 @@ class RailFenceCipher:
                 step *= -1
         return "".join(fence)
 
-    def decode(self, text):
+    def decrypt(self, text):
         if self.rails < 2:
             return text
 

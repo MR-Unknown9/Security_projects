@@ -47,8 +47,8 @@ class PlayfairCipher:
                 out += self.matrix[r1][c2] + self.matrix[r2][c1]
         return out
 
-    def encode(self, text):
+    def encrypt(self, text):
         return self.__translate(self.__pair_text(text), 1)
 
-    def decode(self, text):
+    def decrypt(self, text):
         return self.__translate(self.__pair_text(text), -1)
