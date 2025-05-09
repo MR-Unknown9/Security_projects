@@ -1,8 +1,15 @@
-# main.py
 import customtkinter as ctk
-from gui.GUI import EncoderDecoderApp
+from gui.GUI import TextProcessorApp
 
 if __name__ == "__main__":
+    ctk.set_appearance_mode("System")
+    ctk.set_default_color_theme("blue")
+
+    # Create main window
     root = ctk.CTk()
-    app = EncoderDecoderApp(root)
+
+    # Create the app instance
+    app = TextProcessorApp(root)
+
+    # Run the application
     root.mainloop()
