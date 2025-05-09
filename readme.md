@@ -1,11 +1,15 @@
 # 🧠 Text Encoder / Decoder App
-A simple and interactive GUI application that lets you encode or decode text using various algorithms like Base64, ROT13, and Reverse. Built with Python and CustomTkinter — perfect for students and cybersecurity beginners.
+A simple and interactive GUI application that lets you encode or decode text using various classical cryptographic algorithms. Built with Python and CustomTkinter — ideal for students, enthusiasts, and cybersecurity beginners.
 
 ## ✨ Features
 - Encode and decode text using:
-  - Base64
-  - ROT13
-  - Reverse
+  - AutoKey Cipher
+  - Caesar Cipher
+  - Vigenère Cipher
+  - RailFence Cipher
+  - Monoalphabetic Substitution Cipher
+  - Playfair Cipher
+  - DES (Simplified)
 - Upload a `.txt` file for input
 - Copy output to clipboard
 - Clear input/output fields
@@ -15,21 +19,24 @@ A simple and interactive GUI application that lets you encode or decode text usi
 ## 📁 Project Structure
 ```
 Security\_project/
-├── alg.py         # Logic for text encoding/decoding
-├── gui.py         # GUI layout and behavior
-├── main.py        # Entry point to launch the app
-└── README.md      # This file
-````
+├── algorithms/
+│   ├── AutoKey.py         # AutoKey Cipher
+│   ├── ceaser.py          # Caesar Cipher
+│   ├── des.py             # Simplified DES Cipher
+│   ├── MonoCipher.py      # Monoalphabetic Substitution Cipher
+│   ├── playfair.py        # Playfair Cipher
+│   ├── poly.py            # Vigenère Cipher
+│   └── railFence.py       # RailFence Cipher
+├── gui.py                # GUI layout and behavior
+├── main.py               # Entry point to launch the app
+└── README.md             # This file
+```
 
 ## 🛠 Requirements
 - Python 3.10+
 - Install dependencies with:
 ```bash
 pip install -r requirements.txt
-````
-Or manually:
-```bash
-pip install customtkinter pyperclip
 ```
 
 ## 🚀 How to Run
@@ -38,19 +45,23 @@ python main.py
 ```
 
 ## 📦 Supported Algorithms
-| Algorithm | Encode | Decode |
-| --------- | ------ | ------ |
-| Base64    | ✅      | ✅      |
-| ROT13     | ✅      | ✅      |
-| Reverse   | ✅      | ✅      |
+| Algorithm        | Encode | Decode |
+|------------------|--------|--------|
+| AutoKey          | ✅     | ✅     |
+| Caesar           | ✅     | ✅     |
+| Vigenère         | ✅     | ✅     |
+| RailFence        | ✅     | ✅     |
+| Monoalphabetic   | ✅     | ✅     |
+| Playfair         | ✅     | ✅     |
+| DES (Simplified) | ✅     | ✅     |
 
 ## 🎓 Use Cases
 * Cryptography exercises
-* Cybersecurity workshops
-* Quick encoding/decoding tool for class projects
+* Cybersecurity and ethical hacking workshops
+* Class projects involving secure communication concepts
 
 ## 📌 Notes
-* This app is meant for educational use.
-* More algorithms and features (like hashing, encryption) can be added easily.
+* This app is meant for educational use only.
+* Easily extendable with more algorithms like RSA, Hashing, etc.
 
-Made with ❤️ for learning and exploration.
+Made with ❤️ for learning, experimenting, and cryptographic curiosity.
