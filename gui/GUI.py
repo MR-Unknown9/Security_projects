@@ -4,10 +4,10 @@ import tkinter.filedialog as filedialog
 import tkinter.messagebox as msgbox
 
 # <==== Algorithms ====>
-from algorithms.AutoKey import AutokeyCipher
+from algorithms.AutoKey import AutoKeyCipher
 from algorithms.ceaser import CaesarCipher
 from algorithms.des import DESCipher
-from algorithms.MonoCipher import SubstitutionCipher
+from algorithms.MonoCipher import MonoalphabeticCipher
 from algorithms.playfair import PlayfairCipher
 from algorithms.poly import VigenereCipher
 from algorithms.railFence import RailFenceCipher
@@ -115,7 +115,7 @@ class TextProcessorApp:
 
         try:
             if algo == "AutoKey":
-                cipher = AutokeyCipher(key)
+                cipher = AutoKeyCipher(key)
                 result = (
                     cipher.encrypt(text) if action == "Encode" else cipher.decrypt(text)
                 )
@@ -134,7 +134,7 @@ class TextProcessorApp:
                 )
 
             elif algo == "MonoCipher":
-                cipher = SubstitutionCipher(key)
+                cipher = MonoalphabeticCipher(key)
                 result = (
                     cipher.encrypt(text) if action == "Encode" else cipher.decrypt(text)
                 )
