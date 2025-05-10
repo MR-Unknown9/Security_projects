@@ -208,11 +208,3 @@ class TextProcessorApp:
     def toggle_theme(self):
         current = ctk.get_appearance_mode()
         ctk.set_appearance_mode("Dark" if current == "Light" else "Light")
-
-
-if __name__ == "__main__":
-    ctk.set_appearance_mode("Dark")
-    ctk.set_default_color_theme("blue")
-    root = ctk.CTk()
-    app = TextProcessorApp(root)
-    root.mainloop()

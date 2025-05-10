@@ -34,17 +34,14 @@ class PlayfairCipher:
             r1, c1 = self.__find(a)
             r2, c2 = self.__find(b)
             if r1 == r2:
-                out += (
-                    self.matrix[r1][(c1 + shift) % 5]
-                    + self.matrix[r2][(c2 + shift) % 5]
-                )
+                out += self.matrix[r1][(c1 + shift) % 5]
+                out += self.matrix[r2][(c2 + shift) % 5]
             elif c1 == c2:
-                out += (
-                    self.matrix[(r1 + shift) % 5][c1]
-                    + self.matrix[(r2 + shift) % 5][c2]
-                )
+                out += self.matrix[(r1 + shift) % 5][c1]
+                out += self.matrix[(r2 + shift) % 5][c2]
             else:
-                out += self.matrix[r1][c2] + self.matrix[r2][c1]
+                out += self.matrix[r1][c2]
+                out += self.matrix[r2][c1]
         return out
 
     def encrypt(self, text):
